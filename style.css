@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('font/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* Garante que o padding/margin não causem rolagem */
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+}
+
+.menu-superior {
+    width: 100%;
+    height: 450px; /* Ajustado para auto */
+    background-color: #303030;
+    color: white;
+    padding: 200px 10px; /* Ajustado para evitar a rolagem */
+}
+
+.titulo-menuSuperior {
+    font-size: 60px;
+    padding-left: 50px;
+}
+
+.texto-menuSuperior {
+    color: white;
+    padding-left: 50px;
+}
+
+.menuInfo {
+    width: 100%;
+    height: 250px;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    padding: 40px 0 20px 100px ; /* Removido o padding lateral excessivo */
+    margin-bottom: 40px;
+    background-color: #F9F9F9;
+}
+
+.menuInfo > img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cabecalho {
+    text-align: justify;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px; /* Ajustado para evitar rolagem */
+}
+
+.Info-titulo {
+    font-weight: bold;
+    font-size: 36px;
+    margin-left: 30px;
+    padding: 10px; /* Ajuste de padding para texto */
+    text-align: center;
+}
+
+.Info-texto {
+    margin-left: 30px;
+    padding: 10px; /* Ajuste de padding para texto */
+    font-size: 24px;
+    text-align: justify; /* Mantido justificado */
+    text-align: center;
+}
+
+.imagem {
+    max-width: 80%; /* Ajustado para uma melhor responsividade */
+    height: auto;
+    text-align: center;
+}
+
+#formulario {
+    text-align: center;
+    background-color: #303030;
+    max-width: 100%;
+    height: 638px;
+}
+
+#texto-formulario {
+    font-size: 35px;
+    color: white;
+    margin: 25px;
+    padding: 70px 0 10px 0;
+    text-decoration: none;
+}
+
+input {
+    width: calc(100% - 40px); /* Ajustado para 100% da largura, considerando padding */
+    max-width: 500px; /* Limite de largura */
+    height: 70px;
+    padding: 15px; /* Ajustado para um padding mais equilibrado */
+    margin: 15px auto; /* Centraliza e evita rolagem */
+    border: none;
+    border-radius: 10px;
+    background-color: #EAECE5;
+    cursor: pointer;
+    font-weight: bold; /* Alterado para font-weight */
+    font-size: 30px;
+    transition: all 0.3s; /* Adicionada transição */
+}
+
+input:hover {
+    transform: scale(1.05); /* Ajustado para uma transformação menos agressiva */
+    box-shadow: 0px 2px 5px #060f07;
+}
+
+button {
+    width: calc(100% - 40px); /* Ajustado para 100% da largura, considerando padding */
+    max-width: 300px; /* Limite de largura */
+    height: 72px;
+    padding: 15px 20px;
+    background-color: #C07212;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 24px;
+    transition: all 0.3s; /* Adicionada transição */
+}
+
+button:hover {
+    background-color: #0cb614;
+    box-shadow: 0px 5px 10px #060f07;
+    transform: scale(1.05); /* Ajustado para uma transformação menos agressiva */
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .titulo-menuSuperior {
+        font-size: 40px;
+    }
+
+    .menuInfo {
+        padding: 40px 0; /* Ajustes de padding para telas menores */
+        grid-auto-flow: row; /* Muda a disposição para coluna em telas menores */
+    }
+
+    input {
+        width: calc(100% - 40px); /* Ajustado para 100% da largura */
+        margin: 10px 0; /* Ajustes de margin para um layout mais compacto */
+    }
+}
